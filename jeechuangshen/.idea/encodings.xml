@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" addBOMForNewFiles="with NO BOM">
+    <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/jeeadmin" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/jeeadmin/jeeadmin-api" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/jeeadmin/jeeadmin-model" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/jeeadmin/jeeadmin-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/jeeadmin/jeeadmin-web" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/jeecommon" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/jeecommon/jeerigger-activiti" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/jeecommon/jeerigger-core" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/jeecommon/jeerigger-datasource" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/jeecommon/jeerigger-frame" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/jeecommon/jeerigger-swagger" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/jeerigger" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/jeerigger/jeerigger-api" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/jeerigger/jeerigger-model" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/jeerigger/jeerigger-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/jeerigger/jeerigger-web" charset="UTF-8" />
+  </component>
+</project>

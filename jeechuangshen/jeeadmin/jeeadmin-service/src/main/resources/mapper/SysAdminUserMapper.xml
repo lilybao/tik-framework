@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jeeadmin.mapper.SysAdminUserMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.jeeadmin.entity.SysAdminUser">
+        <id column="uuid" property="uuid" />
+        <result column="user_name" property="userName" />
+        <result column="login_name" property="loginName" />
+        <result column="login_password" property="loginPassword" />
+        <result column="user_phone" property="userPhone" />
+        <result column="user_mobile" property="userMobile" />
+        <result column="user_status" property="userStatus" />
+        <result column="user_sort" property="userSort" />
+        <result column="remarks" property="remarks" />
+        <result column="mgr_type" property="mgrType" />
+        <result column="create_user" property="createUser" />
+        <result column="create_date" property="createDate" />
+        <result column="update_user" property="updateUser" />
+        <result column="update_date" property="updateDate" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        uuid, user_name, login_name, login_password, user_phone, user_mobile, user_status, user_sort, remarks, mgr_type, create_user, create_date, update_user, update_date
+    </sql>
+
+</mapper>

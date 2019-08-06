@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.jeechuangshen</groupId>
+    <artifactId>jeechuangshen</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>jeerigger</module>
+        <module>jeeadmin</module>
+        <module>jeecommon</module>
+    </modules>
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.1.2.RELEASE</version>
+        <relativePath></relativePath>
+    </parent>
+    <name>Parent</name>
+
+    <!-- 声明依赖Jar包版本号-->
+    <properties>
+
+        <!-- springboot和swagger整合包 -->
+        <swagger.version>2.7.0</swagger.version>
+        <swagger-ui.version>2.7.0</swagger-ui.version>
+
+        <!--UserAgent 用户客户端代理-->
+        <UserAgentUtils.version>1.21</UserAgentUtils.version>
+
+        <!-- mysql的驱动包 -->
+        <mysql.version>8.0.11</mysql.version>
+        <!-- 神通的驱动包  本地包-->
+        <oscar.version>1.0</oscar.version>
+        <!-- sqlserver驱动包-->
+        <sqlserver.version>7.0.0.jre8</sqlserver.version>
+
+        <!-- mybatis的plugin插件 -->
+        <mybatis-plugin.version>3.0.6</mybatis-plugin.version>
+        <lombok.version>1.16.18</lombok.version>
+
+        <!-- shiro和spring整合包 -->
+        <shiro-spring.version>1.4.0</shiro-spring.version>
+        <!--fastjson-->
+        <fastjson.version>1.2.41</fastjson.version>
+
+        <!--验证码-->
+        <kaptcha.version>2.3.2</kaptcha.version>
+
+        <!--系统监控-->
+        <oshi-core.version>3.9.1</oshi-core.version>
+
+        <!-- ehcache和shiro的整合包 -->
+        <ehcache-shiro.version>1.2.5</ehcache-shiro.version>
+
+        <commons-lang3.version>3.8</commons-lang3.version>
+        <commons-io.version>2.6</commons-io.version>
+        <net.coobird.thumbnailator.version>0.4.8</net.coobird.thumbnailator.version>
+        <activiti.version>6.0.0</activiti.version>
+        <java.version>1.8</java.version>
+    </properties>
+    <!--统一管理依赖Jar包-->
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-thymeleaf</artifactId>
+            </dependency>
+
+            <dependency>
+                <groupId>org.activiti</groupId>
+                <artifactId>activiti-spring</artifactId>
+                <version>${activiti.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.mybatis</groupId>
+                        <artifactId>mybatis</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+            <dependency>
+                <groupId>org.activiti</groupId>
+                <artifactId>activiti-json-converter</artifactId>
+                <version>${activiti.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-swagger2</artifactId>
+                <version>${swagger.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-swagger-ui</artifactId>
+                <version>${swagger-ui.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-boot-starter</artifactId>
+                <version>${mybatis-plugin.version}</version>
+            </dependency>
+
+
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>${mysql.version}</version>
+            </dependency>
+
+        <!--    <dependency>
+                <groupId>com.oscar</groupId>
+                <artifactId>oscar-jdbc16</artifactId>
+                <version>${oscar.version}</version>
+            </dependency>-->
+
+            <dependency>
+                <groupId>com.microsoft.sqlserver</groupId>
+                <artifactId>mssql-jdbc</artifactId>
+                <version>${sqlserver.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>${lombok.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>eu.bitwalker</groupId>
+                <artifactId>UserAgentUtils</artifactId>
+                <version>${UserAgentUtils.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.shiro</groupId>
+                <artifactId>shiro-spring</artifactId>
+                <version>${shiro-spring.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>fastjson</artifactId>
+                <version>${fastjson.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.github.penggle</groupId>
+                <artifactId>kaptcha</artifactId>
+                <version>${kaptcha.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.freemarker</groupId>
+                <artifactId>freemarker</artifactId>
+                <version>${freemarker.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.shiro</groupId>
+                <artifactId>shiro-ehcache</artifactId>
+                <version>${ehcache-shiro.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.github.oshi</groupId>
+                <artifactId>oshi-core</artifactId>
+                <version>${oshi-core.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-lang3</artifactId>
+                <version>${commons-lang3.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>commons-io</groupId>
+                <artifactId>commons-io</artifactId>
+                <version>${commons-io.version}</version>
+            </dependency>
+
+            <!--图片压缩,缩放-->
+            <dependency>
+                <groupId>net.coobird</groupId>
+                <artifactId>thumbnailator</artifactId>
+                <version>${net.coobird.thumbnailator.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+</project>

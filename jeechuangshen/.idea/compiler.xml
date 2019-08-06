@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="jeerigger-core" />
+        <module name="jeerigger-api" />
+        <module name="jeerigger-activiti" />
+        <module name="jeeadmin-model" />
+        <module name="jeerigger-model" />
+        <module name="jeeadmin-web" />
+        <module name="jeerigger-web" />
+        <module name="jeeadmin-api" />
+        <module name="jeerigger-service" />
+        <module name="jeeadmin-service" />
+        <module name="jeerigger-swagger" />
+        <module name="jeerigger-datasource" />
+        <module name="jeerigger-frame" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="spring-boot-2.1.0.RELEASE" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="jeeadmin-api" options="-parameters" />
+      <module name="jeeadmin-model" options="-parameters" />
+      <module name="jeeadmin-service" options="-parameters" />
+      <module name="jeeadmin-web" options="-parameters" />
+      <module name="jeerigger-activiti" options="-parameters" />
+      <module name="jeerigger-api" options="-parameters" />
+      <module name="jeerigger-core" options="-parameters" />
+      <module name="jeerigger-datasource" options="-parameters" />
+      <module name="jeerigger-frame" options="-parameters" />
+      <module name="jeerigger-model" options="-parameters" />
+      <module name="jeerigger-service" options="-parameters" />
+      <module name="jeerigger-swagger" options="-parameters" />
+      <module name="jeerigger-web" options="-parameters" />
+    </option>
+  </component>
+</project>

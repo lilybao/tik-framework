@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>提醒</title>
+    <meta
+      name="viewport"
+      content="initial-scale=1, maximum-scale=1, user-scalable=no"
+    />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+    <meta name="author" content="尹学江" />
+    <style>
+      html,
+      body {
+        border: 0;
+        padding: 0;
+        margin: 0;
+        height: 100%;
+        font-family: Arial, 'Microsoft YaHei';
+      }
+      body {
+        background:url('./remind/login_bg.jpg') no-repeat center center;
+        /* background-color: #2c3e50; */
+      }
+      .box360 {
+        position: fixed;
+        left: 50%;
+        top: 50%;
+        width: 960px;
+        height: 602px;
+        margin-left: -480px;
+        margin-top: -300px;
+      }
+      .box360 .tip-text {
+        padding: 10px 0;
+        line-height: 30px;
+        text-align: center;
+        /* background-color: #fff; */
+        color: #fff;
+        background-color: #07346b;
+      }
+      .box360 .tip-pic img {
+        display: block;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- 提示内容 -->
+    <div id="box360" class="box360">
+      <div class="tip-text">        
+        <div>如果您的浏览器是IE较低版本的浏览器;请点<a href="https://browser.360.cn/se/">这里下载360浏览器</a></div>
+        <div>如果您的浏览器是360浏览器兼容模式,请按照下方的图片来操作！</div>
+      </div>
+      <div class="tip-pic"><img src="./remind/360remaid.jpg" id="remaid" /><div/>
+    </div>
+  </body>
+</html>
+<script src="./browser.js"></script>
+<script>
+  var isSupport = isSupportBrowser()
+  if (isSupport) {
+    window.location.href = '/'
+  }
+</script>

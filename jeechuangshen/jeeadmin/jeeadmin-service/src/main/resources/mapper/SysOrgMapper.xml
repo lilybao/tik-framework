@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jeeadmin.mapper.SysOrgMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.jeeadmin.entity.SysOrg">
+        <id column="uuid" property="uuid" />
+        <result column="parent_uuid" property="parentUuid" />
+        <result column="org_code" property="orgCode" />
+        <result column="org_name" property="orgName" />
+        <result column="org_short_name" property="orgShortName" />
+        <result column="org_type" property="orgType" />
+        <result column="org_leader" property="orgLeader" />
+        <result column="org_address" property="orgAddress" />
+        <result column="org_phone" property="orgPhone" />
+        <result column="org_postal_code" property="orgPostalCode" />
+        <result column="org_sort" property="orgSort" />
+        <result column="org_status" property="orgStatus" />
+        <result column="remarks" property="remarks" />
+        <result column="create_user" property="createUser" />
+        <result column="create_date" property="createDate" />
+        <result column="update_user" property="updateUser" />
+        <result column="update_date" property="updateDate" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        uuid, parent_uuid, org_code, org_name, org_short_name, org_type, org_leader, org_address, org_phone, org_postal_code, org_sort, org_status, remarks, create_user, create_date, update_user, update_date
+    </sql>
+
+</mapper>

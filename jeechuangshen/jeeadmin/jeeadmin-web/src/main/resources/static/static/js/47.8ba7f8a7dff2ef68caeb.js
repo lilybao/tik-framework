@@ -1,0 +1,1 @@
+webpackJsonp([47],{iqWK:function(e,n,o){"use strict";Object.defineProperty(n,"__esModule",{value:!0});var i={name:"AuthRedirect",created:function(){var e=window.location.search.slice(1);window.opener.location.href=window.location.origin+"/login#"+e,window.close()}},l=o("VU/8")(i,null,!1,null,null,null);n.default=l.exports}});

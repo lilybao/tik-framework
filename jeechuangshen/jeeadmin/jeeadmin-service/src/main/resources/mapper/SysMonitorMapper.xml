@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jeeadmin.mapper.SysMonitorMapper">
+
+    <select id="selectMsaOrgUserPage" resultType="com.jeeadmin.vo.monitor.MsaOrgUserVo">
+      select uuid,orgName,total from
+      (
+          SELECT u.uuid,o.org_name orgName,count(u.uuid) total
+          FROM sys_user u,sys_org o
+          WHERE u.org_uuid=o.uuid
+          group by u.uuid,o.org_name
+       )
+      temp order by temp.total desc
+    </select>
+
+    <select id="selectMsaRoleUserPage" resultType="com.jeeadmin.vo.monitor.MsaRoleUserVo">
+      select uuid,roleName,total from
+      (
+		  SELECT r.uuid,r.role_name roleName,count(u.uuid) total
+		  FROM sys_user u,sys_user_role ur,sys_role r
+		  WHERE u.uuid=ur.user_uuid and ur.role_uuid=r.uuid
+		  group by r.uuid,r.role_name
+      )
+      temp order by temp.total desc
+
+    </select>
+
+</mapper>

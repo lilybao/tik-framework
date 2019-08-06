@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jeerigger.module.sys.mapper.SysUserMapper">
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.jeerigger.module.sys.entity.SysUser">
+        <id column="uuid" property="uuid"/>
+        <result column="user_name" property="userName"/>
+        <result column="login_name" property="loginName"/>
+        <result column="login_password" property="loginPassword"/>
+        <result column="user_number" property="userNumber"/>
+        <result column="user_sex" property="userSex"/>
+        <result column="identity_type" property="identityType"/>
+        <result column="identity_code" property="identityCode"/>
+        <result column="user_duty" property="userDuty"/>
+        <result column="user_rank" property="userRank"/>
+        <result column="user_phone" property="userPhone"/>
+        <result column="user_mobile" property="userMobile"/>
+        <result column="user_address" property="userAddress"/>
+        <result column="user_email" property="userEmail"/>
+        <result column="politics_status" property="politicsStatus"/>
+        <result column="org_uuid" property="orgUuid"/>
+        <result column="user_sort" property="userSort"/>
+        <result column="user_status" property="userStatus"/>
+        <result column="pwd_security_level" property="pwdSecurityLevel"/>
+        <result column="pwd_update_date" property="pwdUpdateDate"/>
+        <result column="remarks" property="remarks"/>
+        <result column="mgr_flag" property="mgrFlag"/>
+        <result column="freeze_date" property="freezeDate"/>
+        <result column="freeze_cause" property="freezeCause"/>
+        <result column="last_login_ip" property="lastLoginIp"/>
+        <result column="last_login_date" property="lastLoginDate"/>
+        <result column="create_user" property="createUser"/>
+        <result column="create_date" property="createDate"/>
+        <result column="update_user" property="updateUser"/>
+        <result column="update_date" property="updateDate"/>
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        uuid, user_name, login_name, login_password, user_number, user_sex, identity_type, identity_code, user_duty, user_rank, user_phone, user_mobile, user_address, user_email, politics_status, org_uuid, user_sort, user_status, pwd_security_level, pwd_update_date, remarks, mgr_flag, freeze_date, freeze_cause, last_login_ip, last_login_date, create_user, create_date, update_user, update_date
+    </sql>
+
+    <!-- 根据用户UUID获取已分配角色UUID -->
+    <select id="getUserRoleUuid" parameterType="String" resultType="String">
+        select distinct r.uuid
+        from sys_user u,sys_user_role ur,sys_role r
+        where u.uuid = ur.user_uuid
+        and ur.role_uuid = r.uuid
+        and u.uuid =  #{user_uuid}
+     </select>
+
+    <!-- 根据组织机构管理员用户UUID获取 组织机构管理员分配可管理组织机构-->
+    <select id="getOrgAdminOrgUuid" parameterType="String" resultType="String">
+        select distinct o.uuid
+        from sys_user u,sys_orgadmin_org oao,sys_org o
+        where u.uuid = oao.user_uuid
+        and oao.org_uuid = o.uuid
+        and u.uuid =  #{user_uuid}
+     </select>
+
+    <!-- 根据组织机构管理员用户UUID获取 组织机构管理员分配的角色UUID-->
+    <select id="getOrgAdminRoleUuid" parameterType="String" resultType="String">
+        select distinct r.uuid
+        from sys_user u,sys_orgadmin_role oar,sys_role r
+        where u.uuid = oar.user_uuid
+        and oar.role_uuid = r.uuid
+        and u.uuid =  #{user_uuid}
+     </select>
+
+</mapper>

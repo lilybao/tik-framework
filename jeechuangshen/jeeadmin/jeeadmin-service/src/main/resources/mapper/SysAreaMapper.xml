@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jeeadmin.mapper.SysAreaMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.jeeadmin.entity.SysArea">
+        <id column="uuid" property="uuid" />
+        <result column="parent_uuid" property="parentUuid" />
+        <result column="area_code" property="areaCode" />
+        <result column="area_name" property="areaName" />
+        <result column="area_short_name" property="areaShortName" />
+        <result column="area_type" property="areaType" />
+        <result column="area_sort" property="areaSort" />
+        <result column="area_status" property="areaStatus" />
+        <result column="remarks" property="remarks" />
+        <result column="create_user" property="createUser" />
+        <result column="create_date" property="createDate" />
+        <result column="update_user" property="updateUser" />
+        <result column="update_date" property="updateDate" />
+        <result column="update_date" property="updateDate" />
+    </resultMap>
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        uuid, parent_uuid, area_code, area_name, area_short_name, area_type,area_sort, area_status, remarks, create_user, create_date, update_user, update_date
+    </sql>
+
+</mapper>

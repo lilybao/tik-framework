@@ -1,0 +1,4 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+org.activiti.spring.boot.DataSourceProcessEngineAutoConfiguration,\
+com.jeerigger.activiti.config.AutoConfiguration
+
