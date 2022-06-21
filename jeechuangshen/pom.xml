@@ -33,7 +33,7 @@
         <UserAgentUtils.version>1.21</UserAgentUtils.version>
 
         <!-- mysql的驱动包 -->
-        <mysql.version>8.0.11</mysql.version>
+        <mysql.version>8.0.28</mysql.version>
         <!-- 神通的驱动包  本地包-->
         <oscar.version>1.0</oscar.version>
         <!-- sqlserver驱动包-->
